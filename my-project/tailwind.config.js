@@ -10,7 +10,11 @@ module.exports = {
         "secondary-color": "#515D79",
         "yellow-color": "#F6AD2B",
              },
+             
     },
   },
+  
+  
   plugins: [],
+  
 }
