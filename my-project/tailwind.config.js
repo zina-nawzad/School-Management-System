@@ -7,7 +7,8 @@ module.exports = {
       colors: {
         "primary-color": "#233255",
         "secondary-color": "#515D79",
-        "yellow-color": "#F6AD2B",
+        "tertiary-color": "#7FBDE4",
+
         // Dark mode colors
         "dark-primary-color": "#1b263b",
         "dark-secondary-color": "#2c3e50",

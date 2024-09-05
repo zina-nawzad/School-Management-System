@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Navmenu from "../component/Navmenu";
 import { Outlet } from "react-router-dom";
+import Navmenu from "../Component/Slider";
 
 const MainLayout = () => {
   const [open, setOpen] = useState(true);
-
   const TogglerOpne = () => {
     setOpen(!open);
   };
