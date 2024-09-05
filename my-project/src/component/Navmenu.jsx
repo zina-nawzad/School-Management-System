@@ -102,7 +102,7 @@ const Navmenu = ({ open, TogglerOpne }) => {
     <div className="h-full grid grid-cols-12">
       <div className="h-full bg-slate-100 col-span-12">
         <div
-          className={`bg-primary-color h-full  p-5 pt-8 duration-300 relative`}
+          className={`bg-primary-color dark:bg-white h-full  p-5 pt-8 duration-300 relative`}
         >
           <FaArrowLeft
             className={`

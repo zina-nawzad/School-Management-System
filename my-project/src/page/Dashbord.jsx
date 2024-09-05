@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
+  const toggleTheme = () => {
+      window.TogglderDarkModeLightMode();
+  };
+
   return (
     <div className="flex">
       {/* Middle Part */}
       <div className={`4/6 duration-300`}>
         <div className="flex gap-x-10">
           <h1 className="font-bold text-primary-color text-2xl">Dashboard</h1>
-          <Link
-            to={"Home"}
+          <button
+            onClick={toggleTheme}
             className="py-2 rounded px-4 bg-primary-color font-mono text-white"
           >
             go Home
-          </Link>
+          </button>
         </div>
         <div>
           {/* sun icon */}

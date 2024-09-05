@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-mode="light" lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -39,5 +39,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      // Function to apply the theme based on the provided mode
+      function TogglderDarkModeLightMode() {
+        const darkLightMode = localStorage.getItem("theme");
+        const htmlElement = document.querySelector("html");
+        if (darkLightMode !== "dark" || darkLightMode === null) {
+          htmlElement.setAttribute("data-mode", "dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+          htmlElement.setAttribute("data-mode", "light");
+        }
+      }
+    </script>
   </body>
 </html>
