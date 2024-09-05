@@ -25,6 +25,30 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script>
+      // Function to apply the theme based on the provided mode
+      function TogglderDarkModeLightMode() {
+        const darkLightMode = localStorage.getItem("theme");
+        const htmlElement = document.querySelector("html");
+        if (darkLightMode === "light") {
+          htmlElement.setAttribute("data-mode", "dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+          htmlElement.setAttribute("data-mode", "light");
+        }
+      }
+
+      function Init() {
+        const darkLightMode = localStorage.getItem("theme");
+        if (darkLightMode !== null && darkLightMode === "dark") {
+          const htmlElement = document.querySelector("html");
+          htmlElement.setAttribute("data-mode", "dark");
+        }
+      }
+
+      Init();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,19 +63,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-      // Function to apply the theme based on the provided mode
-      function TogglderDarkModeLightMode() {
-        const darkLightMode = localStorage.getItem("theme");
-        const htmlElement = document.querySelector("html");
-        if (darkLightMode !== "dark" || darkLightMode === null) {
-          htmlElement.setAttribute("data-mode", "dark");
-          localStorage.setItem("theme", "dark");
-        } else {
-          localStorage.setItem("theme", "light");
-          htmlElement.setAttribute("data-mode", "light");
-        }
-      }
-    </script>
   </body>
 </html>

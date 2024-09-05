@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { IoInvertMode } from "react-icons/io5";
 import { IoIosNotifications } from "react-icons/io";
-import Diamond from "../Image/admin.jpg";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { PiStudentFill } from "react-icons/pi";
 import { BsThreeDots } from "react-icons/bs";
@@ -13,9 +12,6 @@ const Dashboard = () => {
   const chartRef = useRef(null);
   const chartRef2 = useRef(null);
   const chartRef3 = useRef(null);
-  const toggleTheme = () => {
-    window.TogglderDarkModeLightMode();
-  };
 
   useEffect(() => {
     const commonData = {
@@ -140,75 +136,9 @@ const Dashboard = () => {
 
   return (
     // Home Page
-    <div className="flex flex-col">
-      {/* Navbar */}
-      <div className="flex justify-between items-center">
-        <div className="text-2xl font-semibold text-primary-color cursor-pointer">
-          <h1>Dashboard</h1>
-        </div>
-
-        <div className="flex flex-row justify-end items-center gap-10">
-          <div className="flex flex-row justify-around items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              fill="currentColor"
-              className="bi bi-bell"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
-            </svg>
-            <div className="flex justify-center items-center w-5 h-5 bg-yellow-600 text-white rounded-md absolute -mt-6 -mr-4">
-              4
-            </div>
-          </div>
-          <div className="flex flex-row justify-around items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              fill="currentColor"
-              className="bi bi-chat-left-text"
-              viewBox="0 0 16 16"
-            >
-              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-              <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
-            </svg>
-            <div className="flex justify-center items-center w-5 h-5 bg-yellow-600 text-white rounded-md absolute -mt-6 -mr-4">
-              4
-            </div>
-          </div>
-          <details>
-            <summary className="flex flex-row justify-between items-center gap-3 w-full font-semibold cursor-pointer">
-              <div className="flex flex-row gap-3 items-center text-[#232152] font-semibold">
-                <img
-                  src={Diamond}
-                  className="w-12 h-12 rounded-full"
-                  alt="Admin"
-                />
-                Admin Admin
-              </div>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-chevron-down right-0 text-[#232152]"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                />
-              </svg>
-            </summary>
-          </details>
-        </div>
-      </div>
-
-      <div className="flex flex-col justify-around items-center gap-y-20 w-2/3">
+    <div className="flex flex-col dark:bg-primary-color px-10">
+      <span className="text-4xl dark:text-white">Dashbord</span>
+      <div className="flex flex-col justify-around items-center gap-y-20">
         <div className="flex w-full  gap-4">
           <div className="flex justify-around items-center cursor-pointer bg-white shadow-[0_4px_8px_rgb(0,0,0,0.1)] mt-10 rounded-lg w-full">
             <div className="flex justify-around items-center  m-3 ">
@@ -308,28 +238,28 @@ const Dashboard = () => {
         <div className="flex justify-between items-center w-full gap-6 ">
           <div className="flex flex-col justify-between items-center p-4 w-1/2 shadow-[0_4px_8px_rgb(0,0,0,0.1)] rounded-lg">
             <div className="flex justify-between items-center w-full">
-              <p className="flex justify-between items-center text-primary-color font-semibold">
+              <p className="flex justify-between items-center text-primary-color dark:text-slate-300 font-semibold">
                 Attendance Summary
               </p>
-              <BsThreeDots className="text-gray-500" />
+              <BsThreeDots className="text-gray-500 dark:text-slate-300  " />
             </div>
             <div className="flex justify-between my-4 w-full">
               <div className="flex  items-center">
                 <p className="border-4 rounded-full border-tertiary-color "></p>
-                <p className="text-sm font-medium text-gray-600 mx-1">
+                <p className="text-sm font-medium text-gray-600 mx-1 dark:text-slate-300 ">
                   {" "}
                   Total Collections
                 </p>
               </div>
               <div className="flex  items-center">
                 <p className="border-4 rounded-full border-[#DAA520] "></p>
-                <p className="text-sm font-medium text-gray-600 mx-1">
+                <p className="text-sm font-medium text-gray-600 mx-1 dark:text-slate-300 ">
                   Fees Collections:
                 </p>
               </div>
               <div className="flex  items-center">
                 <p className="border-4 rounded-full border-[#708238] "></p>
-                <p className="text-sm font-medium text-gray-600 mx-1">
+                <p className="text-sm font-medium text-gray-600 mx-1 dark:text-slate-300 ">
                   Outstanding Fees:
                 </p>
               </div>
@@ -339,27 +269,27 @@ const Dashboard = () => {
           </div>
           <div className="flex flex-col justify-between items-center p-4 w-1/2 shadow-[0_4px_8px_rgb(0,0,0,0.1)]">
             <div className="flex justify-between items-center w-full">
-              <p className="text-sm font-medium ml-2 text-gray-600">
+              <p className="text-sm font-medium ml-2 text-gray-600 dark:text-slate-300 ">
                 Attendance Summary
               </p>
-              <BsThreeDots className="text-gray-500" />
+              <BsThreeDots className="text-gray-500 dark:text-slate-300 " />
             </div>
             <div className="flex justify-between my-4 w-full">
               <div className="flex  items-center">
                 <p className="border-4 rounded-full border-tertiary-color "></p>
-                <p className="text-sm font-medium ml-2 text-gray-600">
+                <p className="text-sm font-medium ml-2 text-gray-600 dark:text-slate-300 ">
                   Total Collections:
                 </p>
               </div>
               <div className="flex  items-center">
                 <p className="border-4 rounded-full border-[#DAA520] "></p>
-                <p className="text-sm font-medium text-gray-600 mx-1">
+                <p className="text-sm font-medium text-gray-600 mx-1 dark:text-slate-300 ">
                   Fees Collections:
                 </p>
               </div>
               <div className="flex  items-center">
                 <p className="border-4 rounded-full border-[#708238] "></p>
-                <p className="text-sm font-medium text-gray-600 mx-1">
+                <p className="text-sm font-medium text-gray-600 mx-1 dark:text-slate-300 ">
                   Outstanding Fees:
                 </p>
               </div>
@@ -369,89 +299,85 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between items-center p-4 w-full shadow-[0_4px_8px_rgb(0,0,0,0.1)]">
+        <div className="flex flex-col justify-between items-center p-4 w-full shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
           <div className="flex justify-between items-center w-full">
-            <p className="flex justify-between items-center text-primary-color font-semibold">
+            <p className="flex justify-between items-center text-primary-color dark:text-white font-semibold">
               Recently registered users
             </p>
-            <BsThreeDots className="text-gray-500" />
+            <BsThreeDots className="text-gray-500 dark:text-slate-300 " />
           </div>
           <div className="w-full flex justify-between items-center ">
             <table className="table w-full mt-5 ">
               {/* head */}
-              <thead className="shadow-[0_4px_8px_rgb(0,0,0,0.1)] p-5">
+              <thead className="shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500 p-5 text-primary-color dark:text-white">
                 <tr>
-                  <td className="text-lg font-semibold text-primary-color p-5 ">
-                    Role
-                  </td>
-                  <td className="text-lg font-semibold text-primary-color p-5">
-                    ID
-                  </td>
-                  <td className="text-lg font-semibold text-primary-color p-5">
-                    Email
-                  </td>
-                  <td className="text-lg font-semibold text-primary-color p-5">
-                    Number
-                  </td>
+                  <td className="text-lg font-semibold  p-5 ">Role</td>
+                  <td className="text-lg font-semibold  p-5">ID</td>
+                  <td className="text-lg font-semibold  p-5">Email</td>
+                  <td className="text-lg font-semibold  p-5">Number</td>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="dark:text-white ">
                 {/* row 1 */}
-                <tr className="shadow-[0_4px_8px_rgb(0,0,0,0.1)] p-5">
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                <tr className="shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500 p-5">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500 ">
                     Admin
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)]  dark:shadow-slate-500">
                     AET154-5671
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     activedgetecnologies@gmail
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">5</td>
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
+                    5
+                  </td>
                 </tr>
                 {/* row 2 */}
-                <tr className="shadow-[0_4px_8px_rgb(0,0,0,0.1)] p-5">
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                <tr className="shadow-[0_4px_8px_rgb(0,0,0,0.1)] p-5 dark:shadow-slate-500">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500 ">
                     Student
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     AET154-5671
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     activedgetecnologies@gmail
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     404
                   </td>
                 </tr>
                 {/* row 3 */}
-                <tr className="shadow-[0_4px_8px_rgb(0,0,0,0.1)] p-5">
+                <tr className="shadow-[0_4px_8px_rgb(0,0,0,0.1)] p-5 dark:shadow-slate-500">
                   <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
                     Parent
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     AET154-5671
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     activedgetecnologies@gmail
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     150
                   </td>
                 </tr>
                 {/* row 4 */}
                 <tr className="p-5">
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     Teacher
                   </td>
 
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)]  ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)]  dark:shadow-slate-500">
                     AET154-5671
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
                     activedgetecnologies@gmail
                   </td>
-                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] ">50</td>
+                  <td className="p-5 shadow-[0_4px_8px_rgb(0,0,0,0.1)] dark:shadow-slate-500">
+                    50
+                  </td>
                 </tr>
               </tbody>
             </table>
