@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Navmenu from "../Component/Slider";
+import Navmenu from "../Component/Navmenu";
 import Header from "../Component/Header";
 
 const MainLayout = () => {

@@ -272,7 +272,7 @@ const Dashboard = () => {
               <p className="text-sm font-medium ml-2 text-gray-600 dark:text-slate-300 ">
                 Attendance Summary
               </p>
-              <BsThreeDots className="text-gray-500 dark:text-slate-300 " />
+              <BsThreeDots className="text-gray-500 dark:text-slate-300  " />
             </div>
             <div className="flex justify-between my-4 w-full">
               <div className="flex  items-center">
